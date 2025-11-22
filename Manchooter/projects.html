@@ -68,100 +68,22 @@
     </header>
 
     <main>
-      <!-- PAGE HEADER WITH CAROUSEL -->
+      <!-- HERO SECTION WITH BACKGROUND IMAGE -->
       <section
+        class="hero hero--page"
         style="
-          padding: var(--spacing-3xl) var(--spacing-lg);
-          background-color: var(--color-gray-light);
+          background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+            url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1600&h=900&fit=crop')
+              center/cover no-repeat;
         "
       >
-        <div class="container">
-          <h1 style="text-align: center; margin-bottom: var(--spacing-md)">
-            Our Projects
-          </h1>
-          <p
-            style="
-              text-align: center;
-              color: var(--color-text-muted);
-              max-width: 700px;
-              margin: 0 auto;
-            "
-          >
-            Explore innovative solutions we've built for communities worldwide.
-          </p>
-
-          <!-- Carousel -->
-          <div
-            id="projectsCarousel"
-            class="carousel slide mt-4"
-            data-bs-ride="carousel"
-            data-bs-interval="5000"
-            style="max-width: 600px; margin: 2rem auto"
-          >
-            <div class="carousel-indicators">
-              <button
-                type="button"
-                data-bs-target="#projectsCarousel"
-                data-bs-slide-to="0"
-                class="active"
-              ></button>
-              <button
-                type="button"
-                data-bs-target="#projectsCarousel"
-                data-bs-slide-to="1"
-              ></button>
-              <button
-                type="button"
-                data-bs-target="#projectsCarousel"
-                data-bs-slide-to="2"
-              ></button>
-            </div>
-            <div
-              class="carousel-inner"
-              style="
-                border-radius: 8px;
-                overflow: hidden;
-                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-              "
-            >
-              <div class="carousel-item active">
-                <img
-                  src="https://images.unsplash.com/photo-1524678606370-a47ad25cb82a?w=600&h=400&fit=crop"
-                  alt="Urban Mapper project"
-                  class="d-block w-100"
-                />
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&fit=crop"
-                  alt="Community Portal"
-                  class="d-block w-100"
-                />
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="https://images.unsplash.com/photo-1677442d019cecf8c56fe3e48ab21cb88a6641a9?w=600&h=400&fit=crop"
-                  alt="AI Assistant"
-                  class="d-block w-100"
-                />
-              </div>
-            </div>
-            <button
-              class="carousel-control-prev"
-              type="button"
-              data-bs-target="#projectsCarousel"
-              data-bs-slide="prev"
-            >
-              <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button
-              class="carousel-control-next"
-              type="button"
-              data-bs-target="#projectsCarousel"
-              data-bs-slide="next"
-            >
-              <span class="carousel-control-next-icon"></span>
-            </button>
+        <div class="hero__container">
+          <div class="hero__content">
+            <h1 class="hero__title">Our Projects</h1>
+            <p class="hero__subtitle">
+              Explore innovative solutions we've built for communities
+              worldwide.
+            </p>
           </div>
         </div>
       </section>
@@ -528,5 +450,19 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <!-- CHATBOT WIDGET -->
+    <button id="chatbot-button" aria-label="Open chat" title="Chat with us">💬</button>
+    <div id="chatbot-window">
+      <div class="chatbot-header">
+        <h3>Chat with Us</h3>
+        <button id="chatbot-close" aria-label="Close chat">×</button>
+      </div>
+      <div id="chatbot-messages"></div>
+      <div class="chatbot-input-area">
+        <input type="text" id="chatbot-input" placeholder="Type your message..." aria-label="Chat message input">
+        <button id="chatbot-send" aria-label="Send message">Send</button>
+      </div>
+    </div>
   </body>
 </html>

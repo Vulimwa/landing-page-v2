@@ -148,7 +148,7 @@
                 </div>
                 <div class="carousel-item">
                   <img
-                    src="https://images.unsplash.com/photo-1677442d019cecf8c56fe3e48ab21cb88a6641a9?w=600&h=450&fit=crop"
+                    src="https://plus.unsplash.com/premium_photo-1661963874418-df1110ee39c1?q=80&w=1086&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt="AI Assistant and machine learning interface"
                     loading="lazy"
                     class="d-block w-100"
@@ -425,6 +425,27 @@
 
     <!-- Custom JavaScript -->
     <script src="assets/js/main.js"></script>
+
+    <!-- CHATBOT WIDGET -->
+    <button id="chatbot-button" aria-label="Open chat" title="Chat with us">
+      💬
+    </button>
+    <div id="chatbot-window">
+      <div class="chatbot-header">
+        <h3>Chat with Us</h3>
+        <button id="chatbot-close" aria-label="Close chat">×</button>
+      </div>
+      <div id="chatbot-messages"></div>
+      <div class="chatbot-input-area">
+        <input
+          type="text"
+          id="chatbot-input"
+          placeholder="Type your message..."
+          aria-label="Chat message input"
+        />
+        <button id="chatbot-send" aria-label="Send message">Send</button>
+      </div>
+    </div>
   </body>
 </html>
 
